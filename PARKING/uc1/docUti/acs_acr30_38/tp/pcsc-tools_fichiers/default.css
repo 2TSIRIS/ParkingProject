@@ -1,0 +1,22 @@
+body{margin:10px;padding:0px;background:#fff;color:#000;font-family:Sans-Serif;}
+h1{padding:4px;text-align:center;border:4px double #000;background:#ffd;}
+h2{padding:4px;border:1px solid #888;background:#ffd;}
+h3{padding:4px;background:#ffd;}
+table{border:0;margin-left:auto;margin-right:auto;margin-bottom:10px;}
+th{background:#bbd;padding:2px;}
+td{padding:2px;border-bottom:1px dotted #bbd;}
+img{border:0;}
+blockquote{font-weight:bold;font-size:80%;}
+a{text-decoration:none;} 
+a, a:active, a:visited {border-bottom:1px solid white;} 
+a:hover {background:#ff0;border-bottom:1px solid blue;}
+.headtext{color:#889;text-align:center;}
+#directory{text-align:center;margin-left:auto;margin-right:auto;}
+#bandwidth{color:#889;text-align:center;font-size:75%;}
+#news{color:#003;}
+#sponsors{text-align:center;margin-left:auto;margin-right:auto;}
+#trademark{font-size:75%;text-align:center;}
+#versions{text-align:center;}
+.kver{text-align:center;color:#004;font-size:90%;}
+.pvkey{color:#400;font-size:66%;}
+p{margin:10px;}

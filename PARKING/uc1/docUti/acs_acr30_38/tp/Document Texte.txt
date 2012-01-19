@@ -1,0 +1,11 @@
+pkg :
+libacr38u
+pcscd
+pcsc-tools
+
+outils : gscriptor, pcsc_scan ATR_analysis
+
+carte type : 	ACS (Advanced Card System) ACOS-1 8K
+Answer To Reset (ATR) : 3B BE 11 00 00 41 01 38 00 00 00 00 00 00 00 00 02 90 00
+implique =>	ACS (Advanced Card System) ACOS-1 8K
+²

@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+  
+    <meta name="generator" content="HTML Tidy for Linux/x86 (vers 1st March 2002), see www.w3.org">
+
+    <title>pcsc-tools</title>
+	<link rel="stylesheet" type="text/css" href="pcsc-tools_fichiers/default.css">
+<script src="pcsc-tools_fichiers/load.js" async="" type="text/javascript"></script><script type="text/javascript">
+/* <![CDATA[ */
+    (function() {
+        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+        
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = 'http://api.flattr.com/js/0.5.0/load.js?mode=auto';
+        
+        t.parentNode.insertBefore(s, t);
+    })();
+/* ]]> */
+</script>
+  </head><body>
+	  <p><a href="http://stopsoftwarepatents.eu/801000864579/"><img src="pcsc-tools_fichiers/ssp-732-121.gif" alt="stopsoftwarepatents.eu petition banner"></a></p>
+
+    <h1>pcsc-tools</h1>
+
+	<p>
+<iframe allowtransparency="true" marginwidth="0" marginheight="0" border="0" src="pcsc-tools_fichiers/a.html" frameborder="0" height="62" scrolling="no" width="55"></iframe>
+    These tools are used to test a PC/SC driver, card or reader
+    or send commands in a friendly environment (text or graphical
+    user interface).</p>
+
+    <h2>Source Download</h2>
+
+    <ul>
+      <li><a href="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/README">README</a></li>
+
+      <li><a href="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/Changelog">Changelog</a> complete Changelog</li>
+
+      <li>18 August 2010, <a href="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/pcsc-tools-1.4.17.tar.gz">pcsc-tools-1.4.17.tar.gz</a> [<a href="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/pcsc-tools-1.4.17.tar.gz.asc">pcsc-tools-1.4.17.tar.gz.asc</a>]</li>
+    </ul>
+
+
+	<h2>Provided tools</h2>
+
+	<h3>pcsc_scan</h3>
+
+	<p><tt>pcsc_scan(1)</tt> regularly scans every PC/SC reader
+        connected to the host if a card is inserted or removed a
+		"line" is printed.</p>
+
+<pre>PC/SC device scanner
+V 1.4.9 (c) 2001-2006, Ludovic Rousseau &lt;ludovic.rousseau@free.fr&gt;
+Compiled with PC/SC lite version: 1.3.1
+<span style="color: magenta;">Scanning present readers</span>
+<span style="color: red;">Waiting for the first reader...found one</span>
+<span style="color: magenta;">Scanning present readers</span>
+<span style="color: blue;">0: GemPC430 00 00</span>
+
+Tue Mar  7 21:23:48 2006
+ Reader 0: <span style="color: magenta;">GemPC430 00 00</span>
+  Card state: <span style="color: red;">Card removed, </span>
+
+Tue Mar  7 21:24:01 2006
+ Reader 0: <span style="color: magenta;">GemPC430 00 00</span>
+  Card state: <span style="color: red;">Card inserted, </span>
+  ATR: <span style="color: magenta;">3B FA 13 00 FF 81 31 80 45 00 31 C1 73 C0 01 00 00 90 00 B1</span>
+
+ATR: 3B FA 13 00 FF 81 31 80 45 00 31 C1 73 C0 01 00 00 90 00 B1
++ TS = 3B --&gt; Direct Convention
++ T0 = FA, Y(1): 1111, K: 10 (historical bytes)
+  TA(1) = 13 --&gt; <span style="color: magenta;">Fi=372, Di=4, 93 cycles/ETU
+    43010 bits/s at 4 MHz, fMax for Fi = 5 MHz =&gt; 53763 bits/s</span>
+  TB(1) = 00 --&gt; <span style="color: magenta;">VPP is not electrically connected</span>
+  TC(1) = FF --&gt; <span style="color: magenta;">Extra guard time: 255 (special value)</span>
+  TD(1) = 81 --&gt; Y(i+1) = 1000, <span style="color: magenta;">Protocol T = 1</span>
+-----
+  TD(2) = 31 --&gt; Y(i+1) = 0011, <span style="color: magenta;">Protocol T = 1</span>
+-----
+  TA(3) = 80 --&gt; <span style="color: magenta;">IFSC: 128</span>
+  TB(3) = 45 --&gt; <span style="color: magenta;">Block Waiting Integer: 4 - Character Waiting Integer: 5</span>
++ Historical bytes: 00 31 C1 73 C0 01 00 00 90 00
+  Category indicator byte: 00 (compact TLV data object)
+    Tag: 3, len: 1 (card service data byte)
+      Card service data byte: C1
+        - Application selection: by full DF name
+        - Application selection: by partial DF name
+        - EF.DIR and EF.ATR access services: by GET RECORD(s) command
+        - Card without MF
+    Tag: 7, len: 3 (card capabilities)
+      Selection methods: C0
+        - DF selection by full DF name
+        - DF selection by partial DF name
+      Data coding byte: 01
+        - Behaviour of write functions: one-time write
+        - Value 'FF' for the first byte of BER-TLV tag fields: invalid
+        - Data unit in quartets: 2
+      Command chaining, length fields and logical channels: 00
+        - Logical channel number assignment: No logical channel
+        - Maximum number of logical channels: 1
+    Mandatory status indicator (3 last bytes)
+      LCS (life card cycle): 00 (No information given)
+      SW: 9000 (Normal processing.)
++ TCK = B1 (correct checksum)
+
+Possibly identified card (using /usr/lib/pcsc/smartcard_list.txt):
+3B FA 13 00 FF 81 31 80 45 00 31 C1 73 C0 01 00 00 90 00 B1
+        OpenPGP
+
+Tue Mar  7 21:24:08 2006
+ Reader 0: <span style="color: magenta;">GemPC430 00 00</span>
+  Card state: <span style="color: red;">Card removed, </span>
+
+Tue Mar  7 21:24:18 2006
+ Reader 0: <span style="color: magenta;">GemPC430 00 00</span>
+  Card state: <span style="color: red;">Status unavailable, </span>
+<span style="color: magenta;">Scanning present readers</span>
+<span style="color: red;">Waiting for the first reader...</span>
+</pre>
+
+        <h3>ATR_analysis</h3> 
+
+		<p><tt>ATR_analysis(1)</tt> is a Perl script used to parse the
+		smart card ATR. This script is called (by default) by
+		pcsc_scan.</p>
+
+        <p>This code was originally written by Christophe in August
+        2000 for a Perl wrapper using "TLP driver" (and not PC/SC)
+        to access the smartcard.</p>
+
+		<h3>smartcard_list.txt</h3>
+
+		<p>The <tt><a href="http://ludovic.rousseau.free.fr/softwares/pcsc-tools/smartcard_list.txt">smartcard_list.txt</a></tt> list
+		contains ATR of some cards. The list is used by ATR_analysis to
+		find a card model corresponding to the ATR. I took the initial
+		list from SCEZ by Matthias Bruestle.</p>
+
+        <p>Please send me (<a href="mailto:ludovic.rousseau@free.fr">ludovic.rousseau@free.fr</a>)
+        any ATR and card description not included in the list.</p>
+
+        <h3>scriptor</h3> 
+
+		<p><tt>scriptor(1)</tt> is a Perl script to send commands to a
+		smart card using a batch file or stdin.</p>
+
+<pre>$ scriptor 
+No reader given: using GemPC Twin 0 0
+Using T=0 protocol
+Reading commands from STDIN
+reset
+&gt; RESET
+&lt; OK: 3B A7 00 40 18 80 65 A2 08 01 01 52 
+00 A4 00 00 02 3F 00
+&gt; 00 A4 00 00 02 3F 00
+&lt; 61 12 : 0x12 bytes of response still available.
+00 C0 00 00 12
+&gt; 00 C0 00 00 12
+&lt; 85 10 80 01 3F 00 38 00 00 00 01 00 01 00 00 00 00 6B 90 00 : Normal processing.
+</pre>
+
+        <h3>gscriptor(1)</h3> 
+
+		<p>the same idea as scriptor.pl(1) but with a Perl-Gtk2 GUI.</p>
+		<p><img src="pcsc-tools_fichiers/gscriptor.png" alt="gscriptor screen copy"></p>
+
+    <h2>Authors</h2>
+
+    <ul>
+		<li>Lionel VICTOR for <tt>scriptor</tt> and <tt>gscriptor</tt></li>
+
+		<li>Ludovic ROUSSEAU for <tt>pcsc_scan</tt>,
+		<tt>ATR_analysis</tt> and debug of <tt>scriptor</tt> and
+		<tt>gscriptor</tt></li>
+
+		<li>Christophe LEVANTIS for the original code of 
+		<tt>ATR_analysis</tt></li>
+
+		<li>And YOU, dear contributor, for data in
+		<tt>smartcard_list.txt</tt></li>
+    </ul>
+
+    <h2>Licence</h2>
+
+    <p>pcsc-tools<br>
+	Copyright (C) 2001-2008  Lionel VICTOR, Ludovic ROUSSEAU</p>
+
+	<p>This program is free software; you can redistribute it and/or
+	modify it under the terms of the GNU General Public License as
+	published by the Free Software Foundation; either version 2 of the
+	License, or (at your option) any later version.</p>
+
+	<p>This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	General Public License for more details.</p>
+
+	<p>You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+	USA</p>
+
+    <h2>Debian</h2>
+
+	<p>See also the <a href="http://www.debian.org/"><img src="pcsc-tools_fichiers/logo-50.jpg" alt="" height="61" width="50"><img src="pcsc-tools_fichiers/debian.jpg" alt="Debian Project" height="61" width="179"></a> page for <a href="http://packages.debian.org/pcsc-tools">pcsc-tools</a>.</p>
+
+	<h2>Windows</h2>
+
+	<p>The <a href="http://www.springcard.com/">SpringCard</a> compagny
+	provides a Windows binary installer for <a href="http://www.springcard.com/solutions/pcsc.html">gScriptor</a>
+	(a forked version of gscriptor).</p>
+
+	<p>SpringCard also provides some other nice free software tools to
+	send APDU commands to a card on Windows.</p>
+
+	<p><img alt="counter" src="pcsc-tools_fichiers/wwwcount.gif">
+	since 13/09/2001.</p>
+    <hr>
+	<p><a href="mailto:Ludovic.Rousseau@free.fr">Ludovic Rousseau</a>,
+	(c) 30 may 2001, last update 13 September 2008.</p>
+
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img src="pcsc-tools_fichiers/valid-html40.png" alt="Valid HTML 4.0 Strict" height="31" width="88"></a>
+  </p>
+
+	<script src="pcsc-tools_fichiers/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+		_uacct = "UA-2404298-1";
+		urchinTracker();
+	</script>
+  </body></html>

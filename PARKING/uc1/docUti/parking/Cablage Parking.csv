@@ -1,0 +1,39 @@
+&&&&&&&&&&&
+&&&&&&&&&&&
+Cablage des détecteurs de présence&&&&&&&&&&&
+Barette &1&&&&&&&&&&
+&Rouge & 24 V&Alimentation&&&&&&&&
+&Noir &0V&Alimentation&&&&&&&&
+&&&Alto1&CN1&&&&&&&
+&Bleu &OV&&&&&&&&&
+&Orange&Sortie 1&&&&&&&&&
+&Jaune&Sortie 2&&&&&&&&&
+&Vert&Sortie 3&&&&&&&&&
+&Violet&Sortie 4&&&&&&&&&
+&&&&&&&&&&&
+&&&&&&&&&&&
+Signalisation&&PREMIER ETAGE&&&&&&&&&
+&place&&&&&&place&&&&
+&101&rouge&ALTO 1&CN2&3&&109&rouge&ALTO2&CN2&3
+&102&orange&ALTO 1&CN2&5&&110&orange&ALTO2&CN2&5
+&103&jaune&ALTO 1&CN2&7&&111&jaune&ALTO2&CN2&7
+&104&vert &ALTO 1&CN2&9&&112&vert &ALTO2&CN2&9
+&105&bleu&ALTO 1&CN4&3&&113&bleu&ALTO2&CN4&3
+&106&violet&ALTO 1&CN4&5&&114&violet&ALTO2&CN4&5
+&107&gris&ALTO 1&CN4&7&&115&gris&ALTO2&CN4&7
+&108&blanc&ALTO 1&CN4&9&&116&blanc&ALTO2&CN4&9
+&&masse (noir)&ALTO 1&CN2&2-4-6-8&&&masse (noir)&ALTO2&CN2&2-4-6-8
+&&masse (noir)&ALTO 1&CN4&2-4-6-8&&&&ALTO2&CN4&2-4-6-8
+&&&&&&&&&&&
+&DEUXIEME ETAGE&&&&&&&&&&
+&place&&&&&&&&&&
+&201&rouge&ALTO3&CN2&3&&&&&&
+&201&orange&ALTO3&CN2&5&&&&&&
+&203&jaune&ALTO3&CN2&7&&&&&&
+&204&vert &ALTO3&CN2&9&&&&&&
+&205&bleu&ALTO3&CN4&3&&&&&&
+&206&violet&ALTO3&CN4&5&&&&&&
+&207&gris&ALTO3&CN4&7&&&&&&
+&208&blanc&ALTO3&CN4&9&&&&&&
+&&masse (noir)&ALTO3&CN2&2-4-6-8&&&&&&
+&&masse (noir)&ALTO3&CN4&2-4-6-8&&&&&&
